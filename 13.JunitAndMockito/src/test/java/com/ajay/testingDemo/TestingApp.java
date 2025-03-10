@@ -1,14 +1,11 @@
-package com.ajay.testing;
+package com.ajay.testingDemo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.assertj.core.api.Assertions.offset;
 
 import org.assertj.core.data.Offset;
-import org.hamcrest.core.IsInstanceOf;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -45,6 +42,7 @@ public class TestingApp {
 
 	@Test
 	public void name1() {
+		
 		// Assertions.assertEquals(8, addTwoNumber(5, 3));
 
 		int result = addTwoNumber(3, 5);

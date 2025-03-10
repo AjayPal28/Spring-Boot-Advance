@@ -1,10 +1,10 @@
 package com.ajay.services;
 
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.modelmapper.ModelMapper;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.ajay.dto.PostDTO;
@@ -12,8 +12,8 @@ import com.ajay.entities.PostEntity;
 import com.ajay.exception.ResourceNotFoundException;
 import com.ajay.repositories.PostRepository;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service @RequiredArgsConstructor

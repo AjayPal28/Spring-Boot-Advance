@@ -1,20 +1,16 @@
 package com.ajay.services;
 
 
-import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 
-import com.ajay.entities.User;
-import com.ajay.exception.ResourceNotFoundException;
 import com.ajay.repositories.UserRepository;
 
-import java.util.Optional;
+import lombok.RequiredArgsConstructor;
 
 //@Service
 @RequiredArgsConstructor
