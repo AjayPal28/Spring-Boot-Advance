@@ -5,7 +5,7 @@ spring:
         git:
           uri: https://github.com/AjayPal28/Config-Server
           username: AjayPal28
-          password: ################
+          password: #######
           default-label: main
 
 server:
