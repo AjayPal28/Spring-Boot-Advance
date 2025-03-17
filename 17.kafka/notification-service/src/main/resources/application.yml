@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: notification-service
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kafka
+    username: postgres
+    password: root
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        spring.json.trusted.packages: "ajay.event"
+        schema.registry.url: "http://127.0.0.1:8081"
+
+server:
+  port: 9060
